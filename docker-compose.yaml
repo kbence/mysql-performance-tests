@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpw
+
+  performance-tests:
+    build: .
+    links:
+      - mysql:mysql
+    environment:
+      MYSQL_HOST: mysql
