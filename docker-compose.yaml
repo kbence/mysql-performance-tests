@@ -12,3 +12,4 @@ services:
       - mysql:mysql
     environment:
       MYSQL_HOST: mysql
+      CONTINUOUS_RUN: 1
